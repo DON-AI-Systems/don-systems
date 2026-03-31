@@ -2,39 +2,24 @@
 const projects = [
   {
     title: "DON",
-    description: "Persönliches AI-Betriebssystem. Skill-basierter Assistent mit Memory, strukturiertem Problemlösen und 33 spezialisierten Fähigkeiten. Gebaut auf Claude Code.",
-    tags: ["Claude Code", "TypeScript", "AI Infrastructure"],
+    subtitle: "Personal AI Infrastructure",
+    bullets: [
+      "Persönliches AI-Betriebssystem",
+      "Skill-basierter Assistent mit Memory und strukturiertem Problemlösen",
+      "33 spezialisierte Fähigkeiten"
+    ],
+    tags: ["Claude Code", "Obsidian"],
     status: "Aktiv"
-  },
-  {
-    title: "BrandFlowLab",
-    description: "Markenentwicklung trifft AI. Strukturierte Workflows für Identität, Positionierung und visuelle Systeme.",
-    tags: ["Branding", "AI Workflows", "Design Systems"],
-    status: "In Entwicklung"
   },
   {
     title: "Context Map",
-    description: "Komplettes Kontextinventar über alle AI-Systeme und Wissensquellen hinweg. Token-bewusstes Laden, Progressive Disclosure für Kontext.",
+    bullets: [
+      "Komplettes Kontextinventar über alle AI-Systeme und Wissensquellen",
+      "Token-bewusstes Laden",
+      "Progressive Disclosure für Kontext"
+    ],
     tags: ["Knowledge Management", "Token Optimization"],
     status: "Aktiv"
-  },
-  {
-    title: "Skill System",
-    description: "Modulare AI-Fähigkeiten mit Trigger-Matching, Validierung und Lifecycle-Management. Von Ghostwriting bis Security Reconnaissance.",
-    tags: ["AI Skills", "Automation", "Modular Architecture"],
-    status: "33 Skills"
-  },
-  {
-    title: "Extract Wisdom",
-    description: "Dynamische Wissensextraktion aus Videos, Podcasts und Artikeln. Passt Sektionen automatisch an den Inhalt an.",
-    tags: ["Content Analysis", "Knowledge Extraction"],
-    status: "Aktiv"
-  },
-  {
-    title: "Visibility Engine",
-    description: "Authentische Präsenz aufbauen. Content-Pipeline von Idee bis Veröffentlichung, gesteuert durch persönliche Stimme und Werte.",
-    tags: ["Content Strategy", "Personal Brand"],
-    status: "In Entwicklung"
   }
 ]
 ---
@@ -53,6 +38,7 @@ const projects = [
     <div class="container">
       <aside class="sidebar">
         <div class="bio">
+          <img src="/don-logo.png" alt="DON" class="logo" />
           <h1>DON AI<br/>Systems</h1>
           <p class="tagline">Systeme, die mitdenken.</p>
 
@@ -64,11 +50,7 @@ const projects = [
           <div class="details">
             <div class="detail-item">
               <span class="label">Stack</span>
-              <span>Claude Code, TypeScript, Astro, Obsidian</span>
-            </div>
-            <div class="detail-item">
-              <span class="label">Standort</span>
-              <span>Hamburg</span>
+              <span>Claude Code, Obsidian, TypeScript</span>
             </div>
             <div class="detail-item">
               <span class="label">Fokus</span>
@@ -77,7 +59,7 @@ const projects = [
           </div>
 
           <div class="links">
-            <a href="https://github.com/Jubinho22" target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:info@donsystems.de">info@donsystems.de</a>
           </div>
         </div>
       </aside>
@@ -91,7 +73,12 @@ const projects = [
                 <h3>{project.title}</h3>
                 <span class="status">{project.status}</span>
               </div>
-              <p>{project.description}</p>
+              {project.subtitle && <p class="project-subtitle">{project.subtitle}</p>}
+              <ul class="project-bullets">
+                {project.bullets.map((bullet) => (
+                  <li>{bullet}</li>
+                ))}
+              </ul>
               <div class="tags">
                 {project.tags.map((tag) => (
                   <span class="tag">{tag}</span>
@@ -101,23 +88,6 @@ const projects = [
           ))}
         </section>
 
-        <section class="philosophy">
-          <h2>Prinzipien</h2>
-          <div class="principles">
-            <div class="principle">
-              <h3>Klarheit vor Features</h3>
-              <p>Ein System, das man nicht versteht, ist kein gutes System. Jede Komponente hat einen klaren Zweck.</p>
-            </div>
-            <div class="principle">
-              <h3>Kontext ist König</h3>
-              <p>Die beste AI-Antwort kommt nicht vom besten Modell, sondern vom richtigen Kontext zur richtigen Zeit.</p>
-            </div>
-            <div class="principle">
-              <h3>Progressive Disclosure</h3>
-              <p>Nicht alles auf einmal laden. Nur das, was gerade gebraucht wird. Token-bewusst, nicht Token-verschwenderisch.</p>
-            </div>
-          </div>
-        </section>
       </main>
     </div>
 
@@ -166,8 +136,8 @@ const projects = [
       .sidebar {
         position: sticky;
         top: 0;
-        width: 360px;
-        min-width: 360px;
+        width: 400px;
+        min-width: 400px;
         height: 100vh;
         padding: 4rem 3rem 4rem 0;
         display: flex;
@@ -179,6 +149,12 @@ const projects = [
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+      }
+
+      .logo {
+        width: 72px;
+        height: 72px;
+        object-fit: contain;
       }
 
       h1 {
@@ -303,11 +279,26 @@ const projects = [
         white-space: nowrap;
       }
 
-      .project p {
+      .project-subtitle {
+        font-family: var(--font-caps);
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--accent);
+        margin-bottom: 0.4rem;
+      }
+
+      .project-bullets {
         font-size: 0.92rem;
         color: var(--text);
         line-height: 1.7;
         margin-bottom: 0.8rem;
+        padding-left: 1.2rem;
+      }
+
+      .project-bullets li {
+        margin-bottom: 0.2rem;
       }
 
       .tags {
@@ -323,25 +314,6 @@ const projects = [
         background: var(--tag-bg);
         padding: 0.2rem 0.6rem;
         border-radius: 3px;
-      }
-
-      .principles {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-      }
-
-      .principle h3 {
-        font-family: var(--font-headline);
-        font-weight: 700;
-        font-size: 1.1rem;
-        margin-bottom: 0.4rem;
-      }
-
-      .principle p {
-        font-size: 0.92rem;
-        color: var(--text);
-        line-height: 1.7;
       }
 
       @media (max-width: 768px) {
@@ -362,6 +334,11 @@ const projects = [
           padding: 2rem 0 3rem;
           border-left: none;
           border-top: 1px solid var(--border);
+        }
+
+        .logo {
+          width: 48px;
+          height: 48px;
         }
 
         h1 {
