@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <!-- DON Monogram -->
-  <!-- N: bottom-left UP, top-left diagonal DOWN to bottom-right, bottom-right UP -->
+  <!-- Background circle for visibility on any tab color -->
+  <circle cx="100" cy="100" r="100" fill="#282828"/>
 
   <defs>
     <clipPath id="n-clip">
@@ -8,15 +8,15 @@
     </clipPath>
   </defs>
 
-  <!-- Orange N: up, diagonal down, up -->
+  <!-- Orange N -->
   <polyline points="34,164 34,36 164,164 164,36"
             fill="none" stroke="#f18219" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"
             clip-path="url(#n-clip)"/>
 
-  <!-- D shape -->
+  <!-- D shape (white) -->
   <path d="M 24 24 L 24 176 L 100 176 Q 176 176, 176 100 Q 176 24, 100 24 Z"
-        fill="none" stroke="#282828" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+        fill="none" stroke="#ffffff" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
 
-  <!-- O circle -->
-  <circle cx="100" cy="100" r="56" fill="none" stroke="#282828" stroke-width="9"/>
+  <!-- O circle (white) -->
+  <circle cx="100" cy="100" r="56" fill="none" stroke="#ffffff" stroke-width="9"/>
 </svg>
