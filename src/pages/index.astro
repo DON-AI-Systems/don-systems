@@ -1,17 +1,373 @@
 ---
-
+const projects = [
+  {
+    title: "DON",
+    description: "Persönliches AI-Betriebssystem. Skill-basierter Assistent mit Memory, strukturiertem Problemlösen und 33 spezialisierten Fähigkeiten. Gebaut auf Claude Code.",
+    tags: ["Claude Code", "TypeScript", "AI Infrastructure"],
+    status: "Aktiv"
+  },
+  {
+    title: "BrandFlowLab",
+    description: "Markenentwicklung trifft AI. Strukturierte Workflows für Identität, Positionierung und visuelle Systeme.",
+    tags: ["Branding", "AI Workflows", "Design Systems"],
+    status: "In Entwicklung"
+  },
+  {
+    title: "Context Map",
+    description: "Komplettes Kontextinventar über alle AI-Systeme und Wissensquellen hinweg. Token-bewusstes Laden, Progressive Disclosure für Kontext.",
+    tags: ["Knowledge Management", "Token Optimization"],
+    status: "Aktiv"
+  },
+  {
+    title: "Skill System",
+    description: "Modulare AI-Fähigkeiten mit Trigger-Matching, Validierung und Lifecycle-Management. Von Ghostwriting bis Security Reconnaissance.",
+    tags: ["AI Skills", "Automation", "Modular Architecture"],
+    status: "33 Skills"
+  },
+  {
+    title: "Extract Wisdom",
+    description: "Dynamische Wissensextraktion aus Videos, Podcasts und Artikeln. Passt Sektionen automatisch an den Inhalt an.",
+    tags: ["Content Analysis", "Knowledge Extraction"],
+    status: "Aktiv"
+  },
+  {
+    title: "Visibility Engine",
+    description: "Authentische Präsenz aufbauen. Content-Pipeline von Idee bis Veröffentlichung, gesteuert durch persönliche Stimme und Werte.",
+    tags: ["Content Strategy", "Personal Brand"],
+    status: "In Entwicklung"
+  }
+]
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="DON AI Systems - Persönliche AI-Infrastruktur. Systeme, die mitdenken." />
+    <title>DON AI Systems</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Cormorant:ital,wght@0,400;1,400&family=Barlow+Condensed:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="bio">
+          <h1>DON AI<br/>Systems</h1>
+          <p class="tagline">Systeme, die mitdenken.</p>
+
+          <div class="about">
+            <p>Ich baue persönliche AI-Infrastruktur. Nicht Tools, die man benutzt, sondern Systeme, die einen kennen. Die wissen, was wichtig ist, was als nächstes kommt und wo das Wissen liegt.</p>
+            <p>Das Ziel: AI, die nicht bei null anfängt. Sondern da weitermacht, wo man aufgehört hat.</p>
+          </div>
+
+          <div class="details">
+            <div class="detail-item">
+              <span class="label">Stack</span>
+              <span>Claude Code, TypeScript, Astro, Obsidian</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Standort</span>
+              <span>Hamburg</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Fokus</span>
+              <span>AI Infrastructure, Knowledge Systems</span>
+            </div>
+          </div>
+
+          <div class="links">
+            <a href="https://github.com/Jubinho22" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section class="projects">
+          <h2>Projekte</h2>
+          {projects.map((project) => (
+            <article class="project">
+              <div class="project-header">
+                <h3>{project.title}</h3>
+                <span class="status">{project.status}</span>
+              </div>
+              <p>{project.description}</p>
+              <div class="tags">
+                {project.tags.map((tag) => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </section>
+
+        <section class="philosophy">
+          <h2>Prinzipien</h2>
+          <div class="principles">
+            <div class="principle">
+              <h3>Klarheit vor Features</h3>
+              <p>Ein System, das man nicht versteht, ist kein gutes System. Jede Komponente hat einen klaren Zweck.</p>
+            </div>
+            <div class="principle">
+              <h3>Kontext ist König</h3>
+              <p>Die beste AI-Antwort kommt nicht vom besten Modell, sondern vom richtigen Kontext zur richtigen Zeit.</p>
+            </div>
+            <div class="principle">
+              <h3>Progressive Disclosure</h3>
+              <p>Nicht alles auf einmal laden. Nur das, was gerade gebraucht wird. Token-bewusst, nicht Token-verschwenderisch.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg: #f0ebe3;
+        --text: #2c2c2c;
+        --text-light: #6b6b6b;
+        --accent: #8b7355;
+        --border: #d4cdc4;
+        --tag-bg: #e6e0d6;
+        --font-headline: 'Newsreader', Georgia, serif;
+        --font-body: 'Source Serif 4', Georgia, serif;
+        --font-body-alt: 'Supreme', 'Inter', system-ui, sans-serif;
+        --font-ui: 'Inter', system-ui, sans-serif;
+        --font-caps: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+      }
+
+      html {
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        line-height: 1.65;
+      }
+
+      .container {
+        display: flex;
+        min-height: 100vh;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .sidebar {
+        position: sticky;
+        top: 0;
+        width: 360px;
+        min-width: 360px;
+        height: 100vh;
+        padding: 4rem 3rem 4rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .bio {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      h1 {
+        font-family: var(--font-headline);
+        font-weight: 700;
+        font-size: 2.8rem;
+        line-height: 1.1;
+        color: var(--text);
+        letter-spacing: -0.02em;
+      }
+
+      .tagline {
+        font-family: var(--font-body-alt);
+        font-size: 1.05rem;
+        color: var(--text-light);
+        font-weight: 400;
+      }
+
+      .about p {
+        font-size: 0.95rem;
+        color: var(--text);
+        margin-bottom: 0.8rem;
+        line-height: 1.7;
+      }
+
+      .about p:last-child {
+        margin-bottom: 0;
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-top: 0.5rem;
+      }
+
+      .detail-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+        font-family: var(--font-ui);
+        font-size: 0.85rem;
+      }
+
+      .label {
+        font-family: var(--font-caps);
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--accent);
+      }
+
+      .links {
+        display: flex;
+        gap: 1.5rem;
+        padding-top: 0.5rem;
+      }
+
+      .links a {
+        font-family: var(--font-ui);
+        font-size: 0.85rem;
+        color: var(--text);
+        text-decoration: none;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 2px;
+        transition: border-color 0.2s;
+      }
+
+      .links a:hover {
+        border-color: var(--text);
+      }
+
+      .content {
+        flex: 1;
+        padding: 4rem 0 4rem 3rem;
+        border-left: 1px solid var(--border);
+      }
+
+      h2 {
+        font-family: var(--font-caps);
+        font-weight: 600;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--accent);
+        margin-bottom: 2rem;
+      }
+
+      .projects {
+        margin-bottom: 4rem;
+      }
+
+      .project {
+        margin-bottom: 2.5rem;
+        padding-bottom: 2.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .project:last-child {
+        border-bottom: none;
+      }
+
+      .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 0.6rem;
+      }
+
+      .project h3 {
+        font-family: var(--font-headline);
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: var(--text);
+      }
+
+      .status {
+        font-family: var(--font-ui);
+        font-size: 0.75rem;
+        color: var(--text-light);
+        white-space: nowrap;
+      }
+
+      .project p {
+        font-size: 0.92rem;
+        color: var(--text);
+        line-height: 1.7;
+        margin-bottom: 0.8rem;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+
+      .tag {
+        font-family: var(--font-ui);
+        font-size: 0.72rem;
+        color: var(--text-light);
+        background: var(--tag-bg);
+        padding: 0.2rem 0.6rem;
+        border-radius: 3px;
+      }
+
+      .principles {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .principle h3 {
+        font-family: var(--font-headline);
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .principle p {
+        font-size: 0.92rem;
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 0 1.5rem;
+        }
+
+        .sidebar {
+          position: relative;
+          width: 100%;
+          min-width: unset;
+          height: auto;
+          padding: 3rem 0 2rem;
+        }
+
+        .content {
+          padding: 2rem 0 3rem;
+          border-left: none;
+          border-top: 1px solid var(--border);
+        }
+
+        h1 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </body>
 </html>
