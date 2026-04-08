@@ -2,24 +2,80 @@
 const projects = [
   {
     title: "DON",
-    subtitle: "Personal AI Infrastructure",
+    subtitle: "Persönliches AI-Betriebssystem",
     bullets: [
-      "Persönliches AI-Betriebssystem",
-      "Skill-basierter Assistent mit Memory und strukturiertem Problemlösen",
-      "33 spezialisierte Fähigkeiten"
+      "Persistentes Gedächtnis: Ziele, Projekte, Vorlieben, Feedback. Jede neue Session baut auf der letzten auf.",
+      "50+ spezialisierte Fähigkeiten. Recherche, Analyse, Schreiben, Diagramme, Sicherheitsprüfungen.",
+      "Mehrere Agenten parallel an einer Aufgabe. Nicht ein Chat, sondern ein Team.",
+      "Eigenes Persönlichkeitsprofil hinterlegt. Das System kennt meinen Schreibstil und meine Denkweise."
     ],
-    tags: ["Claude Code", "Obsidian"],
+    tags: ["Claude Code", "TypeScript", "Agent SDK"],
     status: "Aktiv"
   },
   {
-    title: "Context Map",
+    title: "Wissenssystem",
+    subtitle: "400+ vernetzte Dokumente in Obsidian",
     bullets: [
-      "Komplettes Kontextinventar über alle AI-Systeme und Wissensquellen",
-      "Token-bewusstes Laden",
-      "Progressive Disclosure für Kontext"
+      "Ziele, Ideen, Kontakte, Projekte, Erkenntnisse. Alles verlinkt, alles durchsuchbar.",
+      "Persönliches Zielsystem mit Hindernissen, Strategien und Fortschritt. Wird wöchentlich reviewed.",
+      "Neue Ideen werden automatisch gegen bestehendes Wissen geprüft. Verbindungen entstehen von alleine.",
+      "Kontextpflege passiert nebenbei. Was ich in einer Session mache, landet als Nebenprodukt im System."
     ],
-    tags: ["Knowledge Management", "Token Optimization"],
+    tags: ["Obsidian", "Wissensmanagement"],
     status: "Aktiv"
+  },
+  {
+    title: "Tägliche Abläufe",
+    subtitle: "Läuft jeden Tag, ohne dass ich dran denken muss",
+    bullets: [
+      "Morgen-Briefing: Kalender, offene Tasks, Habit-Streaks, Verbindungen zwischen Ideen. Ein Befehl.",
+      "Abend-Recap: Was war heute, was fehlt, was steht morgen an.",
+      "Wissen erfassen: Einen Link eingeben. Das System erstellt die Notiz, aktualisiert 4 Indexe und verlinkt alles.",
+      "Session-Protokoll: Nach jeder Arbeitssession analysiert ein Agent das Gespräch und schreibt die Highlights in die Tagesnotiz.",
+      "Ghostwriter: Mails, Nachrichten, Präsentationen in meinem Ton. Kein generisches AI-Deutsch."
+    ],
+    tags: ["Automatisierung", "Agenten", "Hooks"],
+    status: "Läuft"
+  },
+  {
+    title: "Infrastruktur",
+    subtitle: "Was unter der Haube steckt",
+    bullets: [
+      "Memory-System: Zwei Ebenen. Kurzzeit-Feedback pro Session, Langzeit-Erkenntnisse über Monate.",
+      "Event-Hooks: Das System reagiert auf Ereignisse. Session endet, Datei ändert sich, Backup wird erstellt.",
+      "Modulare Architektur: Jede Fähigkeit ist ein eigenes Paket mit Abläufen, Werkzeugen und Qualitätsprüfungen.",
+      "Sicherheit: Erkennung von Datenabfluss, automatische Backups, geschützte Systembereiche.",
+      "Selbstverbesserung: Das System analysiert seine eigenen Fähigkeiten und kann sie vereinfachen oder neue erstellen."
+    ],
+    tags: ["Hooks", "Memory", "Sicherheit"],
+    status: "Aktiv"
+  },
+  {
+    title: "Compound-Effekt",
+    subtitle: "Claude Code + Obsidian",
+    bullets: [
+      "Claude Code bringt Agenten, Skills und Automatisierung. Obsidian bringt 400+ Seiten Kontext.",
+      "Zusammen: Jede Nutzung macht beides besser. Neues Wissen fließt ins System, das System nutzt es sofort.",
+      "Nach 2 Monaten: Das System kennt meine Projekte, meine Denkmuster, meine Schwächen.",
+      "An Tagen mit wenig Energie reicht ein Befehl. Das System arbeitet trotzdem weiter.",
+      "Skill Nr. 1 hat Skill Nr. 50 ermöglicht. Jede Fähigkeit baut auf den vorherigen auf."
+    ],
+    tags: ["Claude Code", "Obsidian", "Flywheel"],
+    status: "Wächst"
+  },
+  {
+    title: "Fähigkeiten (Auswahl)",
+    subtitle: "Aus 50+ spezialisierten Skills",
+    bullets: [
+      "Council: Mehrere Agenten debattieren ein Thema. Ich bekomme Gegenargumente, nicht Bestätigung.",
+      "Red Team: 32 Agenten greifen eine Idee gleichzeitig an. Was überlebt, ist belastbar.",
+      "Tiefenrecherche: 10+ Quellen parallel, Ergebnisse zusammengeführt, mit Quellenangaben.",
+      "Recall: Alte Notizen tauchen mit neuer Relevanz wieder auf. Vergessenes Wissen wird nutzbar.",
+      "Diagramme: Architekturen und Abläufe aus Text generiert, direkt verwendbar.",
+      "Dokumente: Word, Excel, Präsentationen im eigenen Design. Fertig formatiert."
+    ],
+    tags: ["Agenten", "Recherche", "Kreativ"],
+    status: "Läuft"
   }
 ]
 ---
@@ -43,8 +99,8 @@ const projects = [
           <p class="tagline">Systeme, die mitdenken.</p>
 
           <div class="about">
-            <p>Ich baue persönliche AI-Infrastruktur. Nicht Tools, die man benutzt, sondern Systeme, die einen kennen. Die wissen, was wichtig ist, was als nächstes kommt und wo das Wissen liegt.</p>
-            <p>Das Ziel: AI, die nicht bei null anfängt. Sondern da weitermacht, wo man aufgehört hat.</p>
+            <p>Ich baue AI-Systeme, die nicht bei null anfangen. Die wissen, was wichtig ist, was als nächstes kommt und wo das Wissen liegt.</p>
+            <p>Kein generischer Chat. Sondern Infrastruktur, die mit jeder Nutzung besser wird.</p>
           </div>
 
           <div class="details">
@@ -60,7 +116,6 @@ const projects = [
 
           <div class="links">
             <a href="mailto:info@donsystems.de">info@donsystems.de</a>
-            <a href="https://github.com/DON-AI-Systems" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </aside>
