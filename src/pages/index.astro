@@ -4,38 +4,24 @@ const projects = [
     title: "DON",
     subtitle: "Persönliches AI-Betriebssystem",
     bullets: [
-      "Persistentes Gedächtnis: Ziele, Projekte, Vorlieben, Feedback. Jede neue Session baut auf der letzten auf.",
-      "50+ spezialisierte Fähigkeiten. Recherche, Analyse, Schreiben, Diagramme, Sicherheitsprüfungen.",
-      "Mehrere Agenten parallel an einer Aufgabe. Nicht ein Chat, sondern ein Team.",
-      "Eigenes Persönlichkeitsprofil hinterlegt. Das System kennt meinen Schreibstil und meine Denkweise."
+      "Persistentes Gedächtnis über Sessions hinweg. Das System lernt, was zählt.",
+      "50+ Skills. Recherche, Analyse, Schreiben, Diagramme, Sicherheitsprüfungen, Brainstorming.",
+      "Mehrere Agenten parallel an einer Aufgabe. Nicht ein Chat, ein Team.",
+      "Kennt meinen Schreibstil, meine Denkweise, meinen Kontext."
     ],
     tags: ["Claude Code", "TypeScript", "Agent SDK"],
     status: "Aktiv"
   },
   {
-    title: "Wissenssystem",
-    subtitle: "400+ vernetzte Dokumente in Obsidian",
+    title: "Second Brain",
+    subtitle: "Obsidian",
     bullets: [
-      "Ziele, Ideen, Kontakte, Projekte, Erkenntnisse. Alles verlinkt, alles durchsuchbar.",
-      "Persönliches Zielsystem mit Hindernissen, Strategien und Fortschritt. Wird wöchentlich reviewed.",
-      "Neue Ideen werden automatisch gegen bestehendes Wissen geprüft. Verbindungen entstehen von alleine.",
-      "Kontextpflege passiert nebenbei. Was ich in einer Session mache, landet als Nebenprodukt im System."
+      "Alles verlinkt, alles durchsuchbar. Ziele, Ideen, Projekte, Erkenntnisse.",
+      "Neue Inhalte werden automatisch gegen bestehendes Wissen geprüft.",
+      "Was in einer Session passiert, fließt als Nebenprodukt ins System."
     ],
     tags: ["Obsidian", "Wissensmanagement"],
     status: "Aktiv"
-  },
-  {
-    title: "Tägliche Abläufe",
-    subtitle: "Läuft jeden Tag, ohne dass ich dran denken muss",
-    bullets: [
-      "Morgen-Briefing: Kalender, offene Tasks, Habit-Streaks, Verbindungen zwischen Ideen. Ein Befehl.",
-      "Abend-Recap: Was war heute, was fehlt, was steht morgen an.",
-      "Wissen erfassen: Einen Link eingeben. Das System erstellt die Notiz, aktualisiert 4 Indexe und verlinkt alles.",
-      "Session-Protokoll: Nach jeder Arbeitssession analysiert ein Agent das Gespräch und schreibt die Highlights in die Tagesnotiz.",
-      "Ghostwriter: Mails, Nachrichten, Präsentationen in meinem Ton. Kein generisches AI-Deutsch."
-    ],
-    tags: ["Automatisierung", "Agenten", "Hooks"],
-    status: "Läuft"
   },
   {
     title: "Infrastruktur",
@@ -54,28 +40,13 @@ const projects = [
     title: "Compound-Effekt",
     subtitle: "Claude Code + Obsidian",
     bullets: [
-      "Claude Code bringt Agenten, Skills und Automatisierung. Obsidian bringt 400+ Seiten Kontext.",
-      "Zusammen: Jede Nutzung macht beides besser. Neues Wissen fließt ins System, das System nutzt es sofort.",
-      "Nach 2 Monaten: Das System kennt meine Projekte, meine Denkmuster, meine Schwächen.",
+      "Jede Nutzung macht beides besser. Neues Wissen fließt ins System, das System nutzt es sofort.",
+      "Nach 2 Monaten kennt das System Projekte, Denkmuster, Schwächen.",
       "An Tagen mit wenig Energie reicht ein Befehl. Das System arbeitet trotzdem weiter.",
       "Skill Nr. 1 hat Skill Nr. 50 ermöglicht. Jede Fähigkeit baut auf den vorherigen auf."
     ],
     tags: ["Claude Code", "Obsidian", "Flywheel"],
     status: "Wächst"
-  },
-  {
-    title: "Fähigkeiten (Auswahl)",
-    subtitle: "Aus 50+ spezialisierten Skills",
-    bullets: [
-      "Council: Mehrere Agenten debattieren ein Thema. Ich bekomme Gegenargumente, nicht Bestätigung.",
-      "Red Team: 32 Agenten greifen eine Idee gleichzeitig an. Was überlebt, ist belastbar.",
-      "Tiefenrecherche: 10+ Quellen parallel, Ergebnisse zusammengeführt, mit Quellenangaben.",
-      "Recall: Alte Notizen tauchen mit neuer Relevanz wieder auf. Vergessenes Wissen wird nutzbar.",
-      "Diagramme: Architekturen und Abläufe aus Text generiert, direkt verwendbar.",
-      "Dokumente: Word, Excel, Präsentationen im eigenen Design. Fertig formatiert."
-    ],
-    tags: ["Agenten", "Recherche", "Kreativ"],
-    status: "Läuft"
   }
 ]
 ---
@@ -99,8 +70,8 @@ const projects = [
           <p class="tagline">Systeme, die mitdenken.</p>
 
           <div class="about">
-            <p>Ich baue AI-Systeme, die nicht bei null anfangen. Die wissen, was wichtig ist, was als nächstes kommt und wo das Wissen liegt.</p>
-            <p>Kein generischer Chat. Sondern Infrastruktur, die mit jeder Nutzung besser wird.</p>
+            <p>AI-Systeme, die nicht bei null anfangen. Die wissen, was wichtig ist, was kommt und wo das Wissen liegt.</p>
+            <p>Keine generischen Chats. Infrastruktur, die mit jeder Nutzung besser wird.</p>
           </div>
 
           <div class="details">
@@ -122,7 +93,7 @@ const projects = [
 
       <main class="content">
         <section class="projects">
-          <h2>Projekte</h2>
+          <h2>System</h2>
           {projects.map((project) => (
             <article class="project">
               <div class="project-header">
