@@ -27,11 +27,11 @@ const projects = [
     title: "Infrastruktur",
     subtitle: "Was unter der Haube steckt",
     bullets: [
-      "Memory-System: Zwei Ebenen. Kurzzeit-Feedback pro Session, Langzeit-Erkenntnisse über Monate.",
-      "Event-Hooks: Das System reagiert auf Ereignisse. Session endet, Datei ändert sich, Backup wird erstellt.",
-      "Modulare Architektur: Jede Fähigkeit ist ein eigenes Paket mit Abläufen, Werkzeugen und Qualitätsprüfungen.",
-      "Sicherheit: Erkennung von Datenabfluss, automatische Backups, geschützte Systembereiche.",
-      "Selbstverbesserung: Das System analysiert seine eigenen Fähigkeiten und kann sie vereinfachen oder neue erstellen."
+      "<strong>Memory-System:</strong> Zwei Ebenen. Kurzzeit-Feedback pro Session, Langzeit-Erkenntnisse über Monate.",
+      "<strong>Event-Hooks:</strong> Das System reagiert auf Ereignisse. Session endet, Datei ändert sich, Backup wird erstellt.",
+      "<strong>Modulare Architektur:</strong> Jede Fähigkeit ist ein eigenes Paket mit Abläufen, Werkzeugen und Qualitätsprüfungen.",
+      "<strong>Sicherheit:</strong> Erkennung von Datenabfluss, automatische Backups, geschützte Systembereiche.",
+      "<strong>Selbstverbesserung:</strong> Das System analysiert seine eigenen Fähigkeiten und kann sie vereinfachen oder neue erstellen."
     ],
     tags: ["Hooks", "Memory", "Sicherheit"]
   },
@@ -89,7 +89,7 @@ const projects = [
             {project.subtitle && <p class="project-subtitle">{project.subtitle}</p>}
             <ul class="project-bullets">
               {project.bullets.map((bullet) => (
-                <li>{bullet}</li>
+                <li set:html={bullet} />
               ))}
             </ul>
             <div class="tags">
