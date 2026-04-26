@@ -11,21 +11,41 @@ Hier landen Notizen aus dem Bau, Lessons aus echten Fehlversuchen, und gelegentl
 
 ## Warum ein Blog
 
-Drei Gründe.
+Drei Gründe, warum dieser Ort existiert.
 
-Erstens: Schreiben zwingt zur Klarheit. Was sich nicht erklären lässt, ist nicht durchdacht. Der Blog ist ein Filter für meine eigenen Ideen, bevor sie ins System wandern.
+#### Klarheit durch Schreiben
 
-Zweitens: Compound. Jede Notiz wird Teil von DON. Was hier steht, ist morgen Kontext für eine bessere Entscheidung. Schreiben ist Memory, das öffentlich passiert.
+Schreiben zwingt zur Klarheit. Was sich nicht in einem Absatz erklären lässt, ist nicht durchdacht. Der Blog ist der Filter, durch den meine Ideen müssen, bevor sie in DON wandern.
 
-Drittens: Verbindung. Die Leute, die das hier interessant finden, sind die Leute, mit denen ich reden will.
+> Eine Idee, die nicht aufgeschrieben wurde, hat noch nicht stattgefunden. Aufschreiben ist der erste Reality-Check, den eine Idee überlebt oder eben nicht.
 
-## Was kommt
+#### Compound-Effekt
 
-Stichpunkte, was hier in den nächsten Monaten landen wird:
+Jede Notiz wird Teil von DON. Was hier heute steht, ist morgen Kontext für eine bessere Entscheidung. Schreiben ist *Memory, das öffentlich passiert*.
 
-- **Skill-Architektur:** Wie ich entscheide, ob etwas ein Skill, ein Hook oder ein Agent wird.
-- **Memory-Design:** Warum DON drei Speicher-Ebenen hat und nicht eine.
-- **Failed Patterns:** Was nicht funktioniert hat. Mehr Lerngewinn als Success-Posts.
-- **Workflow-Notes:** Konkrete Setups, die im Alltag tragen.
+#### Verbindung
+
+Die Leute, die das hier interessant finden, sind die Leute, mit denen ich reden will. Ein Blog ist ein langsamer, ehrlicher Filter dafür.
+
+---
+
+## Was hier landen wird
+
+Vier Themen-Cluster, die mich beschäftigen und über die ich in den nächsten Monaten schreiben werde:
+
+- **Skill-Architektur:** Wie ich entscheide, ob etwas ein Skill, ein Hook oder ein Agent wird. Welche Patterns tragen, welche kollabieren nach drei Wochen.
+- **Memory-Design:** Warum DON drei Speicher-Ebenen hat und nicht eine. Wie Memory ohne Müll funktioniert.
+- **Failed Patterns:** Was nicht funktioniert hat. Mehr Lerngewinn als jeder Success-Post.
+- **Workflow-Notes:** Konkrete Setups, die im Alltag tragen. Keine Theorie, nur was sich bewährt hat.
 
 Mehr Werkstatt als Showcase.
+
+## Drei Prinzipien
+
+Nicht Theorie, sondern was sich in der Praxis bewährt hat:
+
+1. **Schreiben vor Bauen.** Eine Idee, die ich nicht in einem Absatz erklären kann, ist nicht reif für Code. Schreiben ist die billigste Form des Prototypings.
+2. **Memory vor Cleverness.** Ein dummes System mit gutem Gedächtnis schlägt jedes clevere System ohne. Persistence ist nicht Feature, sie ist Fundament.
+3. **Werkzeug vor Workflow.** Erst die Skills bauen, dann die Routinen drumherum. Andersherum baut man auf Sand.
+
+Mehr dazu in den nächsten Posts.
