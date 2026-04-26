@@ -1,0 +1,111 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "DON AI Systems - Persönliche AI-Infrastruktur. Systeme, die mitdenken." } = Astro.props;
+const path = Astro.url.pathname;
+const isHome = path === "/";
+const isBlog = path.startsWith("/blog");
+---
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Cormorant:ital,wght@0,400;1,400&family=Barlow+Condensed:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <a href="/" class={isHome ? "nav-link active" : "nav-link"}>Home</a>
+        <a href="/blog" class={isBlog ? "nav-link active" : "nav-link"}>Blog</a>
+      </div>
+    </nav>
+
+    <slot />
+
+    <style is:global>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg: #f0ebe3;
+        --text: #2c2c2c;
+        --text-light: #6b6b6b;
+        --accent: #8b7355;
+        --border: #d4cdc4;
+        --tag-bg: #e6e0d6;
+        --font-headline: 'Newsreader', Georgia, serif;
+        --font-body: 'Source Serif 4', Georgia, serif;
+        --font-body-alt: 'Supreme', 'Inter', system-ui, sans-serif;
+        --font-ui: 'Inter', system-ui, sans-serif;
+        --font-caps: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+      }
+
+      html {
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        line-height: 1.65;
+      }
+
+      .top-nav {
+        border-bottom: 1px solid var(--border);
+        background-color: var(--bg);
+      }
+
+      .top-nav-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.2rem 2rem;
+        display: flex;
+        gap: 2rem;
+        justify-content: flex-end;
+      }
+
+      .nav-link {
+        font-family: var(--font-caps);
+        font-weight: 600;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-light);
+        text-decoration: none;
+        padding-bottom: 4px;
+        border-bottom: 1px solid transparent;
+        transition: color 0.2s, border-color 0.2s;
+      }
+
+      .nav-link:hover {
+        color: var(--text);
+      }
+
+      .nav-link.active {
+        color: var(--text);
+        border-bottom-color: var(--accent);
+      }
+
+      @media (max-width: 768px) {
+        .top-nav-inner {
+          padding: 1rem 1.5rem;
+          gap: 1.5rem;
+        }
+      }
+    </style>
+  </body>
+</html>

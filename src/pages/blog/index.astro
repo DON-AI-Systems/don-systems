@@ -1,0 +1,154 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("de-DE", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+---
+
+<BaseLayout title="Blog | DON AI Systems" description="Werkstatt-Notizen aus dem Bau persönlicher AI-Systeme.">
+  <div class="container">
+    <header class="page-header">
+      <h1>Blog</h1>
+      <p class="lede">Werkstatt-Notizen aus dem Bau persönlicher AI-Systeme.</p>
+    </header>
+
+    <ul class="post-list">
+      {posts.map((post) => (
+        <li class="post-item">
+          <a href={`/blog/${post.id}/`}>
+            <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+            <h2>{post.data.title}</h2>
+            {post.data.lede && <p class="post-lede">{post.data.lede}</p>}
+            {post.data.tags && (
+              <div class="tags">
+                {post.data.tags.map((tag) => (
+                  <span class="tag">#{tag}</span>
+                ))}
+              </div>
+            )}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <style>
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .page-header {
+      margin-bottom: 4rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-header h1 {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+    }
+
+    .lede {
+      font-family: var(--font-headline);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--text-light);
+      line-height: 1.5;
+      max-width: 540px;
+    }
+
+    .post-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .post-item {
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .post-item:last-child {
+      border-bottom: none;
+    }
+
+    .post-item a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .post-item time {
+      display: block;
+      font-family: var(--font-caps);
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .post-item h2 {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 1.7rem;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+      transition: color 0.2s;
+    }
+
+    .post-item a:hover h2 {
+      color: var(--accent);
+    }
+
+    .post-lede {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      color: var(--text-light);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 2.5rem 1.5rem;
+      }
+
+      .page-header h1 {
+        font-size: 2.4rem;
+      }
+    }
+  </style>
+</BaseLayout>

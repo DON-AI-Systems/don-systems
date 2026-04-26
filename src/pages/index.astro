@@ -1,4 +1,6 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
 const projects = [
   {
     title: "DON",
@@ -9,8 +11,7 @@ const projects = [
       "Mehrere Agenten parallel an einer Aufgabe. Nicht ein Chat, ein Team.",
       "Kennt meinen Schreibstil, meine Denkweise, meinen Kontext."
     ],
-    tags: ["Claude Code", "TypeScript", "Agent SDK"],
-    status: "Aktiv"
+    tags: ["Claude Code", "TypeScript", "Agent SDK"]
   },
   {
     title: "Second Brain",
@@ -20,8 +21,7 @@ const projects = [
       "Neue Inhalte werden automatisch gegen bestehendes Wissen geprüft.",
       "Was in einer Session passiert, fließt als Nebenprodukt ins System."
     ],
-    tags: ["Obsidian", "Wissensmanagement"],
-    status: "Aktiv"
+    tags: ["Obsidian", "Wissensmanagement"]
   },
   {
     title: "Infrastruktur",
@@ -33,8 +33,7 @@ const projects = [
       "Sicherheit: Erkennung von Datenabfluss, automatische Backups, geschützte Systembereiche.",
       "Selbstverbesserung: Das System analysiert seine eigenen Fähigkeiten und kann sie vereinfachen oder neue erstellen."
     ],
-    tags: ["Hooks", "Memory", "Sicherheit"],
-    status: "Aktiv"
+    tags: ["Hooks", "Memory", "Sicherheit"]
   },
   {
     title: "Compound-Effekt",
@@ -45,333 +44,272 @@ const projects = [
       "An Tagen mit wenig Energie reicht ein Befehl. Das System arbeitet trotzdem weiter.",
       "Skill Nr. 1 hat Skill Nr. 50 ermöglicht. Jede Fähigkeit baut auf den vorherigen auf."
     ],
-    tags: ["Claude Code", "Obsidian", "Flywheel"],
-    status: "Wächst"
+    tags: ["Claude Code", "Obsidian", "Flywheel"]
   }
 ]
 ---
 
-<html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="DON AI Systems - Persönliche AI-Infrastruktur. Systeme, die mitdenken." />
-    <title>DON AI Systems</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Cormorant:ital,wght@0,400;1,400&family=Barlow+Condensed:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container">
-      <aside class="sidebar">
-        <div class="bio">
-          <img src="/don-logo.png" alt="DON" class="logo" />
-          <h1>DON AI<br/>Systems</h1>
-          <p class="tagline">Systeme, die mitdenken.</p>
+<BaseLayout title="DON AI Systems">
+  <div class="container">
+    <aside class="sidebar">
+      <div class="bio">
+        <img src="/don-logo.png" alt="DON" class="logo" />
+        <h1>DON AI<br/>Systems</h1>
+        <p class="tagline">Systeme, die mitdenken.</p>
 
-          <div class="about">
-            <p>AI-Systeme, die nicht bei null anfangen. Die wissen, was wichtig ist, was kommt und wo das Wissen liegt.</p>
-            <p>Keine generischen Chats. Infrastruktur, die mit jeder Nutzung besser wird.</p>
+        <div class="about">
+          <p>Ich baue Systeme, mit denen man AI vom Spielzeug zum Betriebssystem machen kann.</p>
+          <p>Ich bin überzeugt, dass wir nicht den ganzen Tag vor dem Monitor sitzen und prompten sollten. Wir sollten AI weniger nutzen. Aber damit das gut funktioniert, müssen wir sie bestmöglich einsetzen.</p>
+          <p>Und dafür braucht man gute Systeme. Deshalb habe ich DON gebaut.</p>
+        </div>
+
+        <div class="details">
+          <div class="detail-item">
+            <span class="label">Stack</span>
+            <span>Claude Code, Obsidian, TypeScript</span>
           </div>
-
-          <div class="details">
-            <div class="detail-item">
-              <span class="label">Stack</span>
-              <span>Claude Code, Obsidian, TypeScript</span>
-            </div>
-            <div class="detail-item">
-              <span class="label">Fokus</span>
-              <span>AI Infrastructure, Knowledge Systems</span>
-            </div>
-          </div>
-
-          <div class="links">
-            <a href="mailto:info@donsystems.de">info@donsystems.de</a>
+          <div class="detail-item">
+            <span class="label">Fokus</span>
+            <span>AI Infrastructure, Knowledge Systems</span>
           </div>
         </div>
-      </aside>
 
-      <main class="content">
-        <section class="projects">
-          <h2>System</h2>
-          {projects.map((project) => (
-            <article class="project">
-              <div class="project-header">
-                <h3>{project.title}</h3>
-                <span class="status">{project.status}</span>
-              </div>
-              {project.subtitle && <p class="project-subtitle">{project.subtitle}</p>}
-              <ul class="project-bullets">
-                {project.bullets.map((bullet) => (
-                  <li>{bullet}</li>
-                ))}
-              </ul>
-              <div class="tags">
-                {project.tags.map((tag) => (
-                  <span class="tag">{tag}</span>
-                ))}
-              </div>
-            </article>
-          ))}
-        </section>
+        <div class="links">
+          <a href="mailto:info@donsystems.de">info@donsystems.de</a>
+        </div>
+      </div>
+    </aside>
 
-      </main>
-    </div>
+    <main class="content">
+      <section class="projects">
+        <h2>Bausteine</h2>
+        {projects.map((project) => (
+          <article class="project">
+            <h3>{project.title}</h3>
+            {project.subtitle && <p class="project-subtitle">{project.subtitle}</p>}
+            <ul class="project-bullets">
+              {project.bullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+            <div class="tags">
+              {project.tags.map((tag) => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+          </article>
+        ))}
+      </section>
+    </main>
+  </div>
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+  <style>
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
 
-      :root {
-        --bg: #f0ebe3;
-        --text: #2c2c2c;
-        --text-light: #6b6b6b;
-        --accent: #8b7355;
-        --border: #d4cdc4;
-        --tag-bg: #e6e0d6;
-        --font-headline: 'Newsreader', Georgia, serif;
-        --font-body: 'Source Serif 4', Georgia, serif;
-        --font-body-alt: 'Supreme', 'Inter', system-ui, sans-serif;
-        --font-ui: 'Inter', system-ui, sans-serif;
-        --font-caps: 'Barlow Condensed', 'Arial Narrow', sans-serif;
-      }
+    .sidebar {
+      position: sticky;
+      top: 0;
+      width: 400px;
+      min-width: 400px;
+      height: 100vh;
+      padding: 4rem 3rem 4rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-      html {
-        font-size: 16px;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
+    .bio {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
 
-      body {
-        background-color: var(--bg);
-        color: var(--text);
-        font-family: var(--font-body);
-        line-height: 1.65;
-      }
+    .logo {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+    }
 
+    h1 {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 2.8rem;
+      line-height: 1.1;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .tagline {
+      font-family: var(--font-body-alt);
+      font-size: 1.05rem;
+      color: var(--text-light);
+      font-weight: 400;
+    }
+
+    .about p {
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+      line-height: 1.7;
+    }
+
+    .about p:last-child {
+      margin-bottom: 0;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-top: 0.5rem;
+    }
+
+    .detail-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+      font-family: var(--font-ui);
+      font-size: 0.85rem;
+    }
+
+    .label {
+      font-family: var(--font-caps);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+    }
+
+    .links {
+      display: flex;
+      gap: 1.5rem;
+      padding-top: 0.5rem;
+    }
+
+    .links a {
+      font-family: var(--font-ui);
+      font-size: 0.85rem;
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2px;
+      transition: border-color 0.2s;
+    }
+
+    .links a:hover {
+      border-color: var(--text);
+    }
+
+    .content {
+      flex: 1;
+      padding: 4rem 0 4rem 3rem;
+      border-left: 1px solid var(--border);
+    }
+
+    h2 {
+      font-family: var(--font-headline);
+      font-weight: 400;
+      font-style: italic;
+      font-size: 1.8rem;
+      line-height: 1.2;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-bottom: 2.5rem;
+    }
+
+    .projects {
+      margin-bottom: 4rem;
+    }
+
+    .project {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project:last-child {
+      border-bottom: none;
+    }
+
+    .project h3 {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+
+    .project-subtitle {
+      font-family: var(--font-caps);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .project-bullets {
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 0.8rem;
+      padding-left: 1.2rem;
+    }
+
+    .project-bullets li {
+      margin-bottom: 0.2rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      color: var(--text-light);
+      background: var(--tag-bg);
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 768px) {
       .container {
-        display: flex;
-        min-height: 100vh;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2rem;
+        flex-direction: column;
+        padding: 0 1.5rem;
       }
 
       .sidebar {
-        position: sticky;
-        top: 0;
-        width: 400px;
-        min-width: 400px;
-        height: 100vh;
-        padding: 4rem 3rem 4rem 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .bio {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      .logo {
-        width: 72px;
-        height: 72px;
-        object-fit: contain;
-      }
-
-      h1 {
-        font-family: var(--font-headline);
-        font-weight: 700;
-        font-size: 2.8rem;
-        line-height: 1.1;
-        color: var(--text);
-        letter-spacing: -0.02em;
-      }
-
-      .tagline {
-        font-family: var(--font-body-alt);
-        font-size: 1.05rem;
-        color: var(--text-light);
-        font-weight: 400;
-      }
-
-      .about p {
-        font-size: 0.95rem;
-        color: var(--text);
-        margin-bottom: 0.8rem;
-        line-height: 1.7;
-      }
-
-      .about p:last-child {
-        margin-bottom: 0;
-      }
-
-      .details {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        padding-top: 0.5rem;
-      }
-
-      .detail-item {
-        display: flex;
-        flex-direction: column;
-        gap: 0.1rem;
-        font-family: var(--font-ui);
-        font-size: 0.85rem;
-      }
-
-      .label {
-        font-family: var(--font-caps);
-        font-weight: 600;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--accent);
-      }
-
-      .links {
-        display: flex;
-        gap: 1.5rem;
-        padding-top: 0.5rem;
-      }
-
-      .links a {
-        font-family: var(--font-ui);
-        font-size: 0.85rem;
-        color: var(--text);
-        text-decoration: none;
-        border-bottom: 1px solid var(--border);
-        padding-bottom: 2px;
-        transition: border-color 0.2s;
-      }
-
-      .links a:hover {
-        border-color: var(--text);
+        position: relative;
+        width: 100%;
+        min-width: unset;
+        height: auto;
+        padding: 3rem 0 2rem;
       }
 
       .content {
-        flex: 1;
-        padding: 4rem 0 4rem 3rem;
-        border-left: 1px solid var(--border);
+        padding: 2rem 0 3rem;
+        border-left: none;
+        border-top: 1px solid var(--border);
       }
 
-      h2 {
-        font-family: var(--font-caps);
-        font-weight: 600;
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: var(--accent);
-        margin-bottom: 2rem;
+      .logo {
+        width: 48px;
+        height: 48px;
       }
 
-      .projects {
-        margin-bottom: 4rem;
+      h1 {
+        font-size: 2.2rem;
       }
-
-      .project {
-        margin-bottom: 2.5rem;
-        padding-bottom: 2.5rem;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .project:last-child {
-        border-bottom: none;
-      }
-
-      .project-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        margin-bottom: 0.6rem;
-      }
-
-      .project h3 {
-        font-family: var(--font-headline);
-        font-weight: 700;
-        font-size: 1.3rem;
-        color: var(--text);
-      }
-
-      .status {
-        font-family: var(--font-ui);
-        font-size: 0.75rem;
-        color: var(--text-light);
-        white-space: nowrap;
-      }
-
-      .project-subtitle {
-        font-family: var(--font-caps);
-        font-weight: 600;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--accent);
-        margin-bottom: 0.4rem;
-      }
-
-      .project-bullets {
-        font-size: 0.92rem;
-        color: var(--text);
-        line-height: 1.7;
-        margin-bottom: 0.8rem;
-        padding-left: 1.2rem;
-      }
-
-      .project-bullets li {
-        margin-bottom: 0.2rem;
-      }
-
-      .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.4rem;
-      }
-
-      .tag {
-        font-family: var(--font-ui);
-        font-size: 0.72rem;
-        color: var(--text-light);
-        background: var(--tag-bg);
-        padding: 0.2rem 0.6rem;
-        border-radius: 3px;
-      }
-
-      @media (max-width: 768px) {
-        .container {
-          flex-direction: column;
-          padding: 0 1.5rem;
-        }
-
-        .sidebar {
-          position: relative;
-          width: 100%;
-          min-width: unset;
-          height: auto;
-          padding: 3rem 0 2rem;
-        }
-
-        .content {
-          padding: 2rem 0 3rem;
-          border-left: none;
-          border-top: 1px solid var(--border);
-        }
-
-        .logo {
-          width: 48px;
-          height: 48px;
-        }
-
-        h1 {
-          font-size: 2.2rem;
-        }
-      }
-    </style>
-  </body>
-</html>
+    }
+  </style>
+</BaseLayout>
