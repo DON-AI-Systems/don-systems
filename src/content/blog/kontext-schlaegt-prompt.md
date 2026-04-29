@@ -3,6 +3,8 @@ title: "Kontext schlägt Prompt an jedem Tag der Woche"
 lede: "Warum Modellwahl überschätzt wird, und was die echte Stellschraube ist."
 date: 2026-04-29
 tags: ["context-engineering", "don", "memory"]
+coverImage: "/blog/kontext-schlaegt-prompt.png"
+coverAlt: "Drei Memory-Schichten Session, Project und Vault speisen ein AI-Modell durch ein Gateway, im CyberDON-Stil."
 ---
 
 Die Diskussion in den meisten AI-Threads dreht sich um die falsche Achse. Welches Modell ist besser, Claude oder GPT, welche Version, welche Effort-Stufe. Das ist die Frage von vorgestern. Inzwischen sind die Top-Modelle so nah beieinander, dass die Unterschiede in der Praxis kaum noch durchschlagen.

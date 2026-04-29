@@ -38,6 +38,13 @@ const formatDate = (date: Date) =>
     </aside>
 
     <div class="post-body">
+      {post.data.coverImage && (
+        <img
+          class="cover"
+          src={post.data.coverImage}
+          alt={post.data.coverAlt ?? post.data.title}
+        />
+      )}
       <Content />
     </div>
   </article>
@@ -316,6 +323,16 @@ const formatDate = (date: Date) =>
       height: auto;
       margin: 2rem 0;
       border-radius: 4px;
+    }
+
+    .post-body .cover {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: 0 0 2.5rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 0 var(--border);
     }
 
     @media (max-width: 900px) {
